@@ -6,11 +6,11 @@ import MainPageContext from "../../MainPageContext";
 export default function Sidebar() {
   return (
     <MainPageContext.Consumer>
-      {({ filters, current }) => {
+      {({ filter, filters, actions:{filterBooks}, current }) => {
         return (
           <aside className="sidebar">
             <div className="sidebar__books-filters-list">
-              <Filters {...{ filters }} />
+              <Filters {...{ filter, filters, filterBooks }} />
             </div>
             <div className="sidebar__book-preview">
               <BookPreview {...{ current }} />

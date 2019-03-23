@@ -1,0 +1,22 @@
+.sort-by {
+  flex: 1;
+  text-align: right;
+}
+
+.sort-by__btn {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 4px;
+  width: 20%;
+}
+
+.sort-by__btn:hover {
+  background: var(--primary-color-alt);
+}
+.sort-by__btn--asc {
+}
+
+.sort-by__btn--desc {
+}

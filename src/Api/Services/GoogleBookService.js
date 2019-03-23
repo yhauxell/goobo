@@ -35,6 +35,7 @@ export default class GoogleBookService {
         title,
         subtitle,
         authors,
+        description,
         publishedDate,
         averageRating: rating,
         imageLinks: { smallThumbnail: thumbnail }
@@ -45,6 +46,7 @@ export default class GoogleBookService {
       title,
       subtitle,
       authors,
+      description,
       year: publishedDate.split("-")[0],
       rating,
       thumbnail

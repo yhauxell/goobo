@@ -8,10 +8,10 @@ import "./BooksToolbar.css";
 export default function BooksToolbar() {
   return (
     <MainPageContext.Consumer>
-      {({ total, size }) => (
+      {({ total, size, order, actions: { sortBooks } }) => (
         <div className="books-toolbar">
           <Total {...{ total, size }} />
-          <SortBy />
+          <SortBy {...{ order, sortBooks }} />
         </div>
       )}
     </MainPageContext.Consumer>

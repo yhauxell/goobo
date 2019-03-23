@@ -8,10 +8,17 @@ export default function BookPreview(props) {
       thumbnail,
       title,
       subtitle,
-      authorsList,
+      authors,
+      description,
       rating
     } = props.current;
-
+    const authorsList = authors.map((author, index) => {
+      return (
+        <div className="book-preview__author" key={index}>
+          {author}
+        </div>
+      );
+    });
     return (
       <div className="book-preview">
         <span className="book-preview__year">{year}</span>
@@ -25,8 +32,10 @@ export default function BookPreview(props) {
           <small>{subtitle}</small>
         </h2>
         {authorsList}
-        <div className="book-preview__rating">{rating}</div>
-        <div className="book-preview__footer">Formats(pdf, epub)</div>
+        {rating && rating > 0 ? (
+          <div className="book-preview__rating">{rating}</div>
+        ) : null}
+        <div className="book-preview__description">{description}</div>
       </div>
     );
   }

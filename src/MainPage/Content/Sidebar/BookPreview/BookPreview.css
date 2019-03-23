@@ -1,4 +1,49 @@
-.book-preview{
-    flex:1;
-    background: #ccc;
+.book-preview {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 8px;
+}
+
+.book-preview__year {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
+  border-radius: 6px;
+  display: block;
+  background: var(--highlight-color);
+  color: #fff;
+  font-size: 0.8rem;
+}
+.book-preview__preview {
+  align-self: center;
+  width: 70%;
+  min-height: 160px;
+}
+
+.book-preview__title {
+  font-size: 1.2rem;
+  margin: 16px 0 10px;
+}
+.book-preview__title > small {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.book-preview__author {
+  font-size: 0.7rem;
+  margin: 0;
+  color: var(--alternative-font-color);
+}
+
+.book-preview__rating {
+}
+.book-preview__description {
+  margin-top: 8px;
+  font-size: 0.6rem;
+  flex: 1;
+  overflow-y: scroll;
 }

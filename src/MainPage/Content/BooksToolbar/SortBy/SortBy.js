@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
-
-export default class SortBy extends Component {
-  render() {
-    return (
-      <div>
-        sort by ...
-      </div>
-    )
-  }
+import React from "react";
+import "./SortBy.css";
+export default function SortBy(props) {
+  const { order, sortBooks } = props;
+  return (
+    <div className="sort-by">
+      <button
+        className={"sort-by__btn sort-by__btn--" + order}
+        onClick={() => sortBooks(order === "asc" ? "desc" : "asc")}
+      >
+        Year {order}
+      </button>
+    </div>
+  );
 }
