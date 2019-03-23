@@ -16,7 +16,9 @@ export default class GoogleBookService {
       const id = book.id;
       ids.push(id);
       const simpleBook = this.createSimpleBook(book);
-      filters.add(simpleBook.year);
+      if (simpleBook.year) {
+        filters.add(simpleBook.year);
+      }
       books[id] = simpleBook;
     }
     return {
@@ -38,16 +40,19 @@ export default class GoogleBookService {
         description,
         publishedDate,
         averageRating: rating,
-        imageLinks: { smallThumbnail: thumbnail }
+        imageLinks
       }
     } = book;
+
+    let thumbnail = imageLinks ? imageLinks.smallThumbnail : null;
+    
     return {
       id,
       title,
       subtitle,
       authors,
       description,
-      year: publishedDate.split("-")[0],
+      year: publishedDate && publishedDate.split("-")[0],
       rating,
       thumbnail
     };

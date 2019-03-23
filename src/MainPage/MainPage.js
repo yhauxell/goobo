@@ -48,6 +48,9 @@ export default class MainPage extends Component {
   }
 
   getBooks(term) {
+    if (term === "") {
+      term = 'electric vehicle charger';
+    }
     this.service.getBooks(term).then(result => {
       this.setState({ ...result });
       this.original = { ids: result.ids };

@@ -16,11 +16,11 @@ export default class Filter extends Component {
           }
         >
           <a
+            title={ami ? "Click again to unselect me" : "Click to select me"}
             href="#click"
             onClick={e => {
               const active = !(this.state.active && ami);
-              console.log("f, ami, active", f, ami, active);
-              this.setState({ active});
+              this.setState({ active });
               e.preventDefault();
               filterBooks(active ? f : null);
             }}

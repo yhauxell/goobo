@@ -16,26 +16,29 @@
 }
 
 .sidebar__books-filters__filter {
-  padding: 6px 20px;
-  border-radius: 6px;
-  cursor: pointer;
   text-align: center;
-}
-
-.sidebar__books-filters__filter--active {
-  background-color: var(--primary-color-alt);
-  color: #fff;
 }
 
 .sidebar__books-filters__filter > a {
   text-decoration: none;
   color: var(--alternative-font-color);
+  padding: 6px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
 }
-.sidebar__books-filters__filter:hover {
+.sidebar__books-filters__filter > a:hover {
   background: var(--primary-color);
+  border-radius: 6px;
 }
 
-.sidebar__books-filters__filter:hover > a,
 .sidebar__books-filters__filter--active > a {
+  background-color: var(--primary-color-alt);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.sidebar__books-filters__filter > a:hover,
+.sidebar__books-filters__filter--active > a:hover {
   color: #fff;
 }

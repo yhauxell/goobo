@@ -12,7 +12,7 @@ export default function BookPreview(props) {
       description,
       rating
     } = props.current;
-    const authorsList = authors.map((author, index) => {
+    const authorsList = authors && authors.map((author, index) => {
       return (
         <div className="book-preview__author" key={index}>
           {author}
@@ -24,7 +24,7 @@ export default function BookPreview(props) {
         <span className="book-preview__year">{year}</span>
         <img
           className="book-preview__preview"
-          src={thumbnail}
+          src={thumbnail ? thumbnail : `${window.location.origin}/notfound.png`}
           alt="preview not found"
         />
         <h2 className="book-preview__title">

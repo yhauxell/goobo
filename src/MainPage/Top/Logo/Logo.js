@@ -3,7 +3,7 @@ import './Logo.css';
 export default function Logo() {
   return (
     <div className="logo">
-      LOGO
+      <span className="logo__first-letter">G</span>oobo
     </div>
   )
 }
