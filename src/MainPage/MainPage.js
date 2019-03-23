@@ -10,6 +10,7 @@ export default class MainPage extends Component {
     this.state = {
       ids: [],
       books: {},
+      size: 0,
       total: 0,
       filters: [],
       term: "",
@@ -27,7 +28,6 @@ export default class MainPage extends Component {
     this.getBooks("javascript");
   }
   render() {
-    console.log(this.state);
     return (
       <div className="mainPage">
         <MainPageContext.Provider value={this.state}>
@@ -44,24 +44,7 @@ export default class MainPage extends Component {
 
   getBooks(term) {
     this.service.getBooks(term).then(result => {
-      this.setState({ ...this.buildBooksState(result) });
+      this.setState({...result});
     });
-  }
-
-  buildBooksState(result) {
-    let books = {};
-    let ids = [];
-    for (let index = 0; index < result.books.length; index++) {
-      const book = result.books[index];
-      const id = book.id;
-      ids.push(id);
-      books[id] = book;
-    }
-    console.log(ids);
-    return {
-      ids,
-      books,
-      total: ids.length
-    };
   }
 }

@@ -3,6 +3,7 @@ import "./Content.css";
 import Sidebar from "./Sidebar/Sidebar";
 import BooksList from "./BooksList/BooksList";
 import BooksToolbar from "./BooksToolbar/BooksToolbar";
+import BooksFooter from "./BooksFooter/BooksFooter";
 export default function Content() {
   return (
     <div className="content">
@@ -12,6 +13,7 @@ export default function Content() {
       <article className="article">
         <BooksToolbar/>
         <BooksList />
+        <BooksFooter/>
       </article>
     </div>
   );

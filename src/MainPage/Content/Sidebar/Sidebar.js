@@ -1,13 +1,23 @@
-import React from 'react'
-import './Sidebar.css';
+import React from "react";
+import "./Sidebar.css";
+import BookPreview from "./BookPreview/BookPreview";
+import Filters from "./Filters/Filters";
+import MainPageContext from "../../MainPageContext";
 export default function Sidebar() {
   return (
-    <aside className="sidebar">
-      <ul className="sidebar__books-filters">
-        <li className="sidebar__books-filters__filter">2018</li>
-        <li className="sidebar__books-filters__filter">2019</li>
-        <li className="sidebar__books-filters__filter">2020</li>
-      </ul>
-    </aside>
-  )
+    <MainPageContext.Consumer>
+      {({ filters, current }) => {
+        return (
+          <aside className="sidebar">
+            <div className="sidebar__books-filters-list">
+              <Filters {...{ filters }} />
+            </div>
+            <div className="sidebar__book-preview">
+              <BookPreview {...{ current }} />
+            </div>
+          </aside>
+        );
+      }}
+    </MainPageContext.Consumer>
+  );
 }

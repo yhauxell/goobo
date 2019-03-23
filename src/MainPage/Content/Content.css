@@ -1,17 +1,28 @@
+.content {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .article {
   display: flex;
   flex: 1;
   flex-direction: column;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: stretch;
 }
 
+.aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sidebar-bg);
+  margin: 0;
+  justify-content: stretch;
+}
 /* Large screens ----------- */
 @media only screen and (min-width: 768px) {
   .content {
     flex-direction: row;
+    height: 0px;
   }
 }
