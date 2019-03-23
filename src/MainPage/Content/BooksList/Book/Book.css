@@ -1,0 +1,55 @@
+.book {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin: 10px;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px
+}
+
+.book:hover {
+    box-shadow: -1px 15px 21px -13px rgba(0,0,0,0.33);
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 768px) {
+  .book {
+    width: 128px;
+    align-items: flex-start;
+  }
+}
+.book__year{
+  position: absolute;
+  right: 10px;
+  top:10px;
+  padding:2px;
+  border-radius: 6px;
+  display: block;
+  background: var(--highlight-color);
+  color:#fff;
+  font-size: .8rem;
+}
+.book__preview {
+  border-radius: 10px 10px 0 0;
+  width: 128px;
+  height: 157px;
+}
+
+.book__title {
+  padding: 4px;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.book__author {
+  font-size: 0.7rem;
+  padding: 4px;
+}
+
+.book__rating,
+.book__footer {
+  font-size: 0.6rem;
+  padding: 6px;
+}
