@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/goobo/static/js/runtime~main.73fab527.js"
   },
   {
-    "revision": "fdc08b6bb395b61ee054",
-    "url": "/goobo/static/js/main.852a6ef7.chunk.js"
+    "revision": "df580ab3d92cf06f7f03",
+    "url": "/goobo/static/js/main.7c4b916e.chunk.js"
   },
   {
     "revision": "c295d176de75b9886366",
     "url": "/goobo/static/js/2.43d615a2.chunk.js"
   },
   {
-    "revision": "fdc08b6bb395b61ee054",
+    "revision": "df580ab3d92cf06f7f03",
     "url": "/goobo/static/css/main.3a150999.chunk.css"
   },
   {
-    "revision": "f26a898e81a41006afc70738236bb114",
+    "revision": "c7075dceae061c2cc5565a1394cab65c",
     "url": "/goobo/index.html"
   }
 ];
