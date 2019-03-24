@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.3a150999.chunk.css",
-  "main.js": "/static/js/main.5cca6af1.chunk.js",
-  "main.js.map": "/static/js/main.5cca6af1.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.43d615a2.chunk.js": "/static/js/2.43d615a2.chunk.js",
-  "static/js/2.43d615a2.chunk.js.map": "/static/js/2.43d615a2.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.794474a70641efd65e302aee32800e80.js": "/precache-manifest.794474a70641efd65e302aee32800e80.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.3a150999.chunk.css.map": "/static/css/main.3a150999.chunk.css.map",
-  "static/media/dead-error.svg": "/static/media/dead-error.d208d3f9.svg"
+  "main.css": "/goobo/static/css/main.3a150999.chunk.css",
+  "main.js": "/goobo/static/js/main.3af8c2a3.chunk.js",
+  "main.js.map": "/goobo/static/js/main.3af8c2a3.chunk.js.map",
+  "runtime~main.js": "/goobo/static/js/runtime~main.73fab527.js",
+  "runtime~main.js.map": "/goobo/static/js/runtime~main.73fab527.js.map",
+  "static/js/2.43d615a2.chunk.js": "/goobo/static/js/2.43d615a2.chunk.js",
+  "static/js/2.43d615a2.chunk.js.map": "/goobo/static/js/2.43d615a2.chunk.js.map",
+  "index.html": "/goobo/index.html",
+  "precache-manifest.66443d5b4cfc6a67eb098b981f3abb5e.js": "/goobo/precache-manifest.66443d5b4cfc6a67eb098b981f3abb5e.js",
+  "service-worker.js": "/goobo/service-worker.js",
+  "static/css/main.3a150999.chunk.css.map": "/goobo/static/css/main.3a150999.chunk.css.map",
+  "static/media/dead-error.svg": "/goobo/static/media/dead-error.d208d3f9.svg"
 }
