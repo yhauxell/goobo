@@ -56,6 +56,9 @@ src
 │   │   │   └── BooksFooter.js
 │   │   ├── BooksList
 │   │   │   ├── Book
+│   │   │   │   ├── Book.css
+│   │   │   │   ├── Book.js
+│   │   │   │   └── Book.test.js
 │   │   │   ├── BooksList.css
 │   │   │   ├── BooksList.js
 │   │   │   └── BooksList.test.js
@@ -64,12 +67,21 @@ src
 │   │   │   ├── BooksToolbar.js
 │   │   │   ├── BooksToolbar.test.js
 │   │   │   ├── SortBy
+│   │   │   │   ├── SortBy.css
+│   │   │   │   └── SortBy.js
 │   │   │   └── Total
+│   │   │       ├── Total.css
+│   │   │       └── Total.js
 │   │   ├── Content.css
 │   │   ├── Content.js
 │   │   └── Sidebar
 │   │       ├── BookPreview
+│   │       │   ├── BookPreview.css
+│   │       │   └── BookPreview.js
 │   │       ├── Filters
+│   │       │   ├── Filter
+│   │       │   ├── Filters.css
+│   │       │   └── Filters.js
 │   │       ├── Sidebar.css
 │   │       └── Sidebar.js
 │   ├── MainPage.css
@@ -82,6 +94,8 @@ src
 │       │   └── Logo.js
 │       ├── SearchBar
 │       │   ├── Search
+│       │   │   ├── Search.css
+│       │   │   └── Search.js
 │       │   ├── SearchBar.css
 │       │   └── SearchBar.js
 │       ├── Top.css
