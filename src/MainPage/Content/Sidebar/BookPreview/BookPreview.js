@@ -24,22 +24,22 @@ export default function BookPreview(props) {
         );
       });
     return (
-      <div className="book-preview">
+      <div className="book-preview" tabIndex="0">
         <span className="book-preview__year">{year}</span>
         <img
           className="book-preview__preview"
           src={thumbnail ? thumbnail : `${window.location.origin}/notfound.png`}
-          alt="preview not found"
+          alt={title}
         />
         <span className="book-preview__preview-link">
           <a href={previewLink} title="Go to preview at Google Books" target="_blank" rel="noopener noreferrer"> 
           <i className="fas fa-external-link-alt"></i>
           </a>
         </span>
-        <h2 className="book-preview__title">
+        <h1 className="book-preview__title" aria-label="Book Title">
           {title}
-          <small>{subtitle}</small>
-        </h2>
+          <small arial-level="2">{subtitle}</small>
+        </h1>
         {authorsList}
         <div className="book-preview__rating">
           <Rating {...{ rating }} />

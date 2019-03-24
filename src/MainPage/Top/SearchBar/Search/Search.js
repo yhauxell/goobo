@@ -8,8 +8,8 @@ export default class Search extends Component {
   render() {
     const { getBooks } = this.props;
     return (
-      <div className="search" aria-label="Search at Google Books">
-        <form role="search">
+      <div className="search">
+        <form role="search" aria-label="Search at Google Books">
           <input
             className="search__input"
             type="search"
@@ -25,6 +25,7 @@ export default class Search extends Component {
             }}
           />
           <button
+            title="Press to search for books"
             className="search__btn"
             onClick={() => getBooks(this.state.term)}
           >

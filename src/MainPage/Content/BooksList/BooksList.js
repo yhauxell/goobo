@@ -17,7 +17,7 @@ export default class BooksList extends Component {
     return (
       <MainPageContext.Consumer>
         {({ ids, books, total, actions: { changeCurrent } }) => (
-          <div className="books-list">
+          <section className="books-list" >
             {total > 0 ? (
               ids.map(id => {
                 return (
@@ -31,7 +31,7 @@ export default class BooksList extends Component {
             ) : (
               <Loader message="Searching books..."/>
             )}
-          </div>
+          </section>
         )}
       </MainPageContext.Consumer>
     );

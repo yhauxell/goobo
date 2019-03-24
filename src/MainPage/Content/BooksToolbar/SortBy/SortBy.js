@@ -5,6 +5,7 @@ export default function SortBy(props) {
   return (
     <div className="sort-by">
       <button
+        aria-label={order === "asc" ? 'ordered ascendant, click to order in descendant order.': 'ordered descendant, click to order in ascendant order.'}
         className={"sort-by__btn sort-by__btn--" + order}
         onClick={() => sortBooks(order === "asc" ? "desc" : "asc")}
       >

@@ -9,10 +9,10 @@ export default function BooksToolbar() {
   return (
     <MainPageContext.Consumer>
       {({ total, size, order, term, actions: { sortBooks } }) => (
-        <div className="books-toolbar">
+        <section className="books-toolbar">
           <Total {...{ total, size, term }} />
           <SortBy {...{ order, sortBooks }} />
-        </div>
+        </section>
       )}
     </MainPageContext.Consumer>
   );
