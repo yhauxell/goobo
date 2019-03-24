@@ -23,7 +23,7 @@
   align-self: center;
   height: 156px;
 }
-.book-preview__preview-link{
+.book-preview__preview-link {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -47,11 +47,15 @@
   color: var(--alternative-font-color);
 }
 
-.book-preview__rating {
-}
 .book-preview__description {
   margin-top: 8px;
   font-size: 0.6rem;
   flex: 1;
   overflow-y: scroll;
+}
+
+.no-book-preview {
+  color: var(--alternative-font-color);
+  text-align: center;
+  flex: 1;
 }

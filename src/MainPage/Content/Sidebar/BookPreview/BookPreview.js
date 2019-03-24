@@ -48,5 +48,5 @@ export default function BookPreview(props) {
       </div>
     );
   }
-  return <span>No Book Selected</span>;
+  return <p className="no-book-preview">No Book Selected</p>;
 }

@@ -13,7 +13,6 @@ let MainPageContext = React.createContext({
   actions: {
     getBooks: () => {},
     changeCurrent: () => {},
-    setLoading: () => {},
     filterBooks: () => {},
     sortBooks: () => {},
   }

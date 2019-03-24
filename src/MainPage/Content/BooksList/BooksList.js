@@ -29,7 +29,7 @@ export default class BooksList extends Component {
                 );
               })
             ) : (
-              <Loader />
+              <Loader message="Searching books..."/>
             )}
           </div>
         )}

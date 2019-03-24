@@ -6,17 +6,15 @@ import Authors from "../../../../Components/Authors/Authors";
 export default function Book(props) {
   const { id, title, authors, year, rating, thumbnail } = props;
   return (
-    <div className="book">
+    <div className="book" tabIndex="0">
       <span className="book__year">{year}</span>
       <img
         className="book__preview"
         src={thumbnail ? thumbnail : `${window.location.origin}/notfound.png`}
         alt={title}
-        title={title}
         onClick={() => {
           props.onSelect(id);
         }}
-        tabIndex="0"
       />
       <h2 className="book__title">{title}</h2>
       <div className="book__authors">

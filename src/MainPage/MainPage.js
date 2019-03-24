@@ -21,7 +21,6 @@ export default class MainPage extends Component {
       actions: {
         getBooks: term => this.getBooks(term),
         changeCurrent: id => this.changeCurrent(id),
-        setLoading: () => {},
         filterBooks: year => this.filterBooks(year),
         sortBooks: order => this.sortBooks(order)
       }
@@ -34,12 +33,12 @@ export default class MainPage extends Component {
   }
   render() {
     return (
-      <div className="mainPage">
+      <main className="main-page">
         <MainPageContext.Provider value={this.state}>
           <Top />
           <Content />
         </MainPageContext.Provider>
-      </div>
+      </main>
     );
   }
 
@@ -52,6 +51,7 @@ export default class MainPage extends Component {
       term = 'electric vehicle charger';
     }
     this.setState({term});
+    this.setState({ total: 0});
     this.service.getBooks(term).then(result => {
       this.setState({ ...result });
       this.original = { ids: result.ids };

@@ -8,11 +8,13 @@ export default class Search extends Component {
   render() {
     const { getBooks } = this.props;
     return (
-      <div className="search">
+      <div className="search" aria-label="Search at Google Books">
         <form role="search">
           <input
             className="search__input"
-            type="text"
+            type="search"
+            spellcheck="false"
+            aria-required="false"
             placeholder="Type your search term.."
             value={this.state.term}
             onChange={event => this.setState({ term: event.target.value })}
