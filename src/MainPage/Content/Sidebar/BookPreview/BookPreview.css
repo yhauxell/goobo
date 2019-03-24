@@ -40,7 +40,12 @@
   display: block;
   font-size: 0.7rem;
 }
-
+.book-preview__author {
+    padding: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 .book-preview__author {
   font-size: 0.7rem;
   margin: 0;

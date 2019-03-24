@@ -42,7 +42,7 @@ describe("BooBooksToolbar component", () => {
 
         const [displayText, total, booksForText, termContainer] = container.children[0].children;
         
-        expect(displayText.trim()).toBe('Display');
+        expect(displayText.trim()).toBe('Displaying');
         expect(total).toBe('20');
         expect(booksForText.trim()).toBe('books for');
         expect(termContainer.type).toBe('strong');

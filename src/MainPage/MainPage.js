@@ -51,7 +51,7 @@ export default class MainPage extends Component {
     }
 
     getBooks(term) {
-        if (term === "") {
+        if (!term) {
             this.setState({error: { message: "Search term can not be empty."}});
             return;
         }
