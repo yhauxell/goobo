@@ -5,7 +5,7 @@ export default function Authors(props) {
   let details = null;
   if (auths && auths.length > 0) {
     details = props.authors[0];
-    details += auths.length > 1 ? ` +${props.authors.length}` : "";
+    details += auths.length >=2 ? ` +${props.authors.length -1}` : "";
   }
 
   return details ? <React.Fragment>{details}</React.Fragment> : null;
