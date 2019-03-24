@@ -55,8 +55,7 @@ export default class MainPage extends Component {
             this.setState({size:0, error: { message: "Search term can not be empty."}});
             return;
         }
-        this.setState({ term });
-        this.setState({ total: 0 });
+        this.setState({ term , total: 0 , error: null});
         this.service
             .getBooks(term)
             .then(result => {
