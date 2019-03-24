@@ -1,0 +1,29 @@
+.rating {
+  display: block;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rating-wrap {
+  display: inline-block;
+  position: relative;
+  height: 19px;
+}
+
+.rating .stars-active {
+  color: #eebd01;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rating .stars-inactive {
+  color: var(--alternative-font-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: initial;
+}

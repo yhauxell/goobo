@@ -4,7 +4,7 @@ import './BooksFooter.css';
 export default function BooksFooter() {
   return (
     <div className="books-footer">
-      Footer info goes here
+      This is for demostration purspose only using free access to Google Books API <i className="fas fa-smile-wink"></i>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export default function SortBy(props) {
         className={"sort-by__btn sort-by__btn--" + order}
         onClick={() => sortBooks(order === "asc" ? "desc" : "asc")}
       >
-        Year {order}
+        <i className="fas fa-calendar-alt"></i> {order === 'asc' ? <i className="fas fa-sort-amount-down"></i> : <i className="fas fa-sort-amount-up"></i>}
       </button>
     </div>
   );

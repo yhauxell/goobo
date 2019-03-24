@@ -1,3 +1,20 @@
+:root {
+  --app-bg: #f2f4f8;
+  --sidebar-bg: rgb(223, 232, 240);
+  --primary-color: #297bf6;
+  --primary-color-alt: #175dc5;
+  --highlight-color: #393848;
+  --default-font-color: #393848;
+  --alternative-font-color: #84899f;
+  --default-border-color: #9f9ea0;
+  --red-color: #df2d2d;
+}
+
+h4 {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +23,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  color: var(--default-font-color);
 }
 
 code {

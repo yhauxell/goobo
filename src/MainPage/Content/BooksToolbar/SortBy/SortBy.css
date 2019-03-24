@@ -8,8 +8,8 @@
   border: none;
   border-radius: 6px;
   color: #fff;
-  padding: 4px;
-  width: 20%;
+  padding: 8px;
+  font-size: 1rem;
 }
 
 .sort-by__btn:hover {

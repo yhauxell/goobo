@@ -3,33 +3,35 @@ export default class GoogleBookService {
     this.url = "https://www.googleapis.com/books/v1/volumes?q=";
   }
 
-  async getBooks(query) {
-    const result = await fetch(`${this.url}${query}`).then(response => {
+  async getBooks(query, from) {
+    const result = await fetch(`${this.url}${query}&maxResults=40&orderBy=newest&startIndex=0`).then(response => {
       return response.json();
     });
 
     let books = {};
-    let ids = [];
+    let ids = new Set();
     let filters = new Set();
     for (let index = 0; index < result.items.length; index++) {
       const book = result.items[index];
       const id = book.id;
-      ids.push(id);
+      ids.add(id);
       const simpleBook = this.createSimpleBook(book);
       if (simpleBook.year) {
         filters.add(simpleBook.year);
       }
       books[id] = simpleBook;
     }
+    ids = Array.from(ids);
     return {
       ids,
       books,
       size: ids.length,
-      total: result.totalItems,
+      total: result.totalItems,//Free api never reach rest of books, Not used yet!
       filters: Array.from(filters).sort(),
       current: books[ids[0]]
     };
   }
+
   createSimpleBook(book) {
     const {
       id,
@@ -40,7 +42,8 @@ export default class GoogleBookService {
         description,
         publishedDate,
         averageRating: rating,
-        imageLinks
+        imageLinks,
+        previewLink
       }
     } = book;
 
@@ -54,7 +57,8 @@ export default class GoogleBookService {
       description,
       year: publishedDate && publishedDate.split("-")[0],
       rating,
-      thumbnail
+      thumbnail,
+      previewLink
     };
   }
 }

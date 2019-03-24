@@ -5,28 +5,36 @@
   flex-direction: column;
   position: relative;
   padding: 8px;
+  width: 100%;
 }
 
 .book-preview__year {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 10px;
-  padding: 2px;
-  border-radius: 6px;
+  padding: 6px 8px;
+  border-radius: 26px;
   display: block;
   background: var(--highlight-color);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .book-preview__preview {
   align-self: center;
-  width: 70%;
-  min-height: 160px;
+  height: 156px;
 }
-
+.book-preview__preview-link{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .book-preview__title {
   font-size: 1.2rem;
   margin: 16px 0 10px;
+  height: 48px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .book-preview__title > small {
   display: block;

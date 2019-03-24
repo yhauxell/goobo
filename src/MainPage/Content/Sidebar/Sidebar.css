@@ -6,6 +6,7 @@
 .sidebar__books-filters-list {
   display: flex;
   justify-content: center;
+  max-height: 40%;
 }
 .sidebar__book-preview {
   flex: 1;

@@ -16,7 +16,7 @@ export default class MainPage extends Component {
       order: "asc",
       filters: [],
       filter: null,
-      term: "",
+      term: "game of thrones",
       current: null,
       actions: {
         getBooks: term => this.getBooks(term),
@@ -30,7 +30,7 @@ export default class MainPage extends Component {
   }
 
   componentDidMount() {
-    this.getBooks("javascript");
+    this.getBooks(this.state.term);
   }
   render() {
     return (
@@ -51,6 +51,7 @@ export default class MainPage extends Component {
     if (term === "") {
       term = 'electric vehicle charger';
     }
+    this.setState({term});
     this.service.getBooks(term).then(result => {
       this.setState({ ...result });
       this.original = { ids: result.ids };

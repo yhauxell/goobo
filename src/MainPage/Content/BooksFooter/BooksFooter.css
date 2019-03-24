@@ -1,5 +1,7 @@
 .books-footer {
   padding: 4px;
   font-size: 0.8rem;
-  background: var(--primary-color);
+  background: var(--highlight-color);
+  color: var(--alternative-font-color);
+  text-align: right;
 }
