@@ -10,7 +10,7 @@ export default function Book(props) {
       <span className="book__year">{year}</span>
       <img
         className="book__preview"
-        src={thumbnail ? thumbnail : `${window.location.origin}/notfound.png`}
+        src={thumbnail ? thumbnail : `${window.location.href}/notfound.png`}
         alt={title}
         onClick={() => {
           props.onSelect(id);

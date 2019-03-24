@@ -52,7 +52,7 @@ export default class MainPage extends Component {
 
     getBooks(term) {
         if (!term) {
-            this.setState({error: { message: "Search term can not be empty."}});
+            this.setState({size:0, error: { message: "Search term can not be empty."}});
             return;
         }
         this.setState({ term });
@@ -64,7 +64,7 @@ export default class MainPage extends Component {
                 this.original = { ids: result.ids };
             })
             .catch((error)=>{
-                this.setState({error});
+                this.setState({size:0, error});
             });
     }
 

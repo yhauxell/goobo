@@ -1,7 +1,6 @@
 import React from "react";
 import "./BookPreview.css";
 import Rating from "../../../../Components/Rating/Rating";
-
 export default function BookPreview(props) {
     if (props.current) {
         const {
@@ -31,7 +30,7 @@ export default function BookPreview(props) {
                     src={
                         thumbnail
                             ? thumbnail
-                            : `${window.location.origin}/notfound.png`
+                            : `${window.location.href}/notfound.png`
                     }
                     alt={title}
                 />
