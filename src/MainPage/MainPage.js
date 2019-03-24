@@ -24,7 +24,8 @@ export default class MainPage extends Component {
                 changeCurrent: id => this.changeCurrent(id),
                 filterBooks: year => this.filterBooks(year),
                 sortBooks: order => this.sortBooks(order)
-            }
+            },
+            error:null
         };
         this.service = new GoogleBookService();
     }
@@ -51,7 +52,8 @@ export default class MainPage extends Component {
 
     getBooks(term) {
         if (term === "") {
-            term = "electric vehicle charger";
+            this.setState({error: { message: "Search term can not be empty."}});
+            return;
         }
         this.setState({ term });
         this.setState({ total: 0 });
@@ -62,7 +64,7 @@ export default class MainPage extends Component {
                 this.original = { ids: result.ids };
             })
             .catch((error)=>{
-                console.error(error);
+                this.setState({error});
             });
     }
 

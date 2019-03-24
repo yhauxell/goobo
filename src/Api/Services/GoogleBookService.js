@@ -17,6 +17,10 @@ export default class GoogleBookService {
             return response.json();
         });
 
+        if(!result.items || result.items.length === 0){
+            throw new Error("No books found, try with another search term.");
+        }
+
         let books = {};
         let ids = new Set();
         let filters = new Set();
