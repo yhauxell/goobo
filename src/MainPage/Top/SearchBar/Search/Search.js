@@ -13,7 +13,7 @@ export default class Search extends Component {
           <input
             className="search__input"
             type="search"
-            spellcheck="false"
+            spellCheck="false"
             aria-required="false"
             placeholder="Type your search term.."
             value={this.state.term}

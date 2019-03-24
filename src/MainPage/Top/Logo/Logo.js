@@ -1,9 +1,10 @@
-import React from 'react'
-import './Logo.css';
+import React from "react";
+import "./Logo.css";
 export default function Logo() {
   return (
     <div className="logo">
-      <span className="logo__first-letter">G</span>oobo
+      <i className="fas fa-book" />
+       Goobo
     </div>
-  )
+  );
 }
