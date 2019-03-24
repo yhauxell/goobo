@@ -7,7 +7,7 @@ export default function Book(props) {
   const { id, title, authors, year, rating, thumbnail } = props;
   return (
     <div className="book" tabIndex="0">
-      <span className="book__year">{year}</span>
+      <span className="book__year">{year ? year : '----'}</span>
       <img
         className="book__preview"
         src={thumbnail ? thumbnail : `${window.location.href}/notfound.png`}
