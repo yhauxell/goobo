@@ -9,6 +9,9 @@ This project is part of a PoC to demonstrate integration with google books api (
 * Filter books by year.
 * Ajax pagination.
 
+## Available at: 
+[Yausell's Github Pages](https://yhauxell.github.io/goobo)
+
 ### Book
 
 A book contains the following attributes:
