@@ -8,8 +8,8 @@ export default function Top() {
     <div className="top">
       <Logo />
       <MainPageContext.Consumer>
-        {({ actions: { getBooks } }) => {
-          return <SearchBar {...{ getBooks }} />;
+        {({ actions: { searchBooks } }) => {
+          return <SearchBar {...{ searchBooks }} />;
         }}
       </MainPageContext.Consumer>
     </div>

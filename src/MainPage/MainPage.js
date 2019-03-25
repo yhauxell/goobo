@@ -23,7 +23,7 @@ export default class MainPage extends Component {
             total: 0,
             paging: false,
             actions: {
-                getBooks: term => this.getBooks(term),
+                searchBooks: term => this.searchBooks(term),
                 changeCurrent: id => this.changeCurrent(id),
                 filterBooks: year => this.filterBooks(year),
                 sortBooks: order => this.sortBooks(order),
@@ -52,6 +52,11 @@ export default class MainPage extends Component {
 
     changeCurrent(id) {
         this.setState({ current: this.state.books[id] });
+    }
+
+    searchBooks(term) {
+        this.setState({currentPage: 1});
+        this.getBooks(term);
     }
 
     async getBooks(term, from = 0, size = 40) {

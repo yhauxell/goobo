@@ -43,7 +43,7 @@ export default class Search extends Component {
     }
 
     handleSubmit(event) {
-        this.props.getBooks(this.state.term);
+        this.props.searchBooks(this.state.term);
         event.preventDefault();
     }
 }
