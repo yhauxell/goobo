@@ -1,0 +1,21 @@
+.pagination {
+    flex:1;
+}
+
+.pagination__page {
+    display: inline-block;
+    padding: 4px 6px;
+    margin: 0 4px;
+    border-radius: 40px;
+    background: var(--alternative-font-color);
+    color: var(--default-font-color);
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.pagination__page--active{
+    background: var(--default-font-color);
+    color:var(--alternative-font-color);
+    font-weight: bold;
+    font-size: 1rem;
+}

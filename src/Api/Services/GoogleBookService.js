@@ -3,7 +3,7 @@ export default class GoogleBookService {
         this.url = "https://www.googleapis.com/books/v1/volumes?q=";
     }
 
-    async getBooks(query, from) {
+    async getBooks(query, from=0, size=40) {
         const params = {
             method: "GET",
             headers: {
@@ -12,7 +12,7 @@ export default class GoogleBookService {
             mode: "cors"
         };
         const result = await fetch(
-            `${this.url}${query}&maxResults=40&orderBy=newest&startIndex=0`, params
+            `${this.url}${query}&maxResults=${size}&orderBy=newest&startIndex=${from}`, params
         ).then(response => {
             return response.json();
         });
@@ -39,7 +39,7 @@ export default class GoogleBookService {
             ids,
             books,
             size: ids.length,
-            total: result.totalItems, //Free api never reach rest of books, Not used yet!
+            total: result.totalItems,
             filters: Array.from(filters).sort(),
             current: books[ids[0]]
         };

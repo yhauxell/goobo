@@ -13,19 +13,23 @@ export default class MainPage extends Component {
             ids: [],
             books: {},
             size: 0,
-            total: 0,
             order: "asc",
             filters: [],
             filter: null,
             term: "game of thrones",
             current: null,
+            pageSize: 40,
+            currentPage: 1,
+            total: 0,
+            paging: false,
             actions: {
                 getBooks: term => this.getBooks(term),
                 changeCurrent: id => this.changeCurrent(id),
                 filterBooks: year => this.filterBooks(year),
-                sortBooks: order => this.sortBooks(order)
+                sortBooks: order => this.sortBooks(order),
+                changePage: page => this.changePage(page)
             },
-            error:null
+            error: null
         };
         this.service = new GoogleBookService();
     }
@@ -50,21 +54,24 @@ export default class MainPage extends Component {
         this.setState({ current: this.state.books[id] });
     }
 
-    getBooks(term) {
+    async getBooks(term, from = 0, size = 40) {
         if (!term) {
-            this.setState({size:0, error: { message: "Search term can not be empty."}});
+            this.setState({
+                size: 0,
+                error: { message: "Search term can not be empty." }
+            });
             return;
         }
-        this.setState({ term , total: 0 , error: null});
-        this.service
-            .getBooks(term)
-            .then(result => {
-                this.setState({ ...result });
-                this.original = { ids: result.ids };
-            })
-            .catch((error)=>{
-                this.setState({size:0, error});
-            });
+        this.setState({ term, error: null });
+        try {
+            const result = await this.service.getBooks(term, from, size);
+            this.setState({ ...result });
+            this.original = { ids: result.ids };
+            return true;
+        } catch (error) {
+            this.setState({ size: 0, total: 0, error });
+            return false;
+        }
     }
 
     filterBooks(value) {
@@ -98,5 +105,13 @@ export default class MainPage extends Component {
         });
         ids = books.map(book => book.id);
         this.setState({ ids });
+    }
+
+    changePage(currentPage) {
+        const { term, pageSize } = this.state;
+        this.setState({ currentPage, paging: true });
+        this.getBooks(term, (currentPage - 1) * pageSize, pageSize).then(r => {
+            this.setState({ paging: false });
+        });
     }
 }

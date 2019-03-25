@@ -1,79 +1,89 @@
 .book {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  margin: 10px;
-  width: 100%;
-  align-items: center;
-  border-radius: 10px;
-  max-height: 50%;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px;
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    max-height: 50%;
+    overflow: hidden;
 }
 
 .book:hover {
-  box-shadow: -1px 15px 21px -13px rgba(0, 0, 0, 0.33);
-  transform: translate(0, -10px);
+    box-shadow: -1px 15px 21px -13px rgba(0, 0, 0, 0.33);
+    transform: translate(0, -10px);
 }
 
 .book__year {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  padding: 6px 8px;
-  border-radius: 16px;
-  display: block;
-  background: var(--highlight-color);
-  color: #fff;
-  font-size: 0.8rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 6px 8px;
+    border-radius: 16px;
+    display: block;
+    background: var(--highlight-color);
+    color: #fff;
+    font-size: 0.8rem;
 }
 .book__preview {
-  width: 128px;
-  height: 157px;
-  cursor: pointer;
+    width: 128px;
+    height: 157px;
+    cursor: pointer;
 }
 
 .book__title {
-  padding: 4px;
-  font-size: 0.8rem;
-  margin: 0;
-  width: 120px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+    padding: 4px;
+    font-size: 0.8rem;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .book__authors {
-  font-size: 0.7rem;
-  padding: 4px;
-  width: 120px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+    font-size: 0.7rem;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .book__rating,
 .book__footer {
-  font-size: 0.6rem;
-  padding: 6px;
+    font-size: 0.6rem;
+    padding: 6px;
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 768px) {
-  .book {
-    width: 128px;
-    align-items: flex-start;
-  }
-  .book__preview {
-    border-radius: 10px 10px 0 0;
-  }
+    .book {
+        width: 128px;
+        align-items: flex-start;
+    }
+    .book__preview {
+        border-radius: 10px 10px 0 0;
+    }
+    .book__title {
+        width: 120px;
+        text-align: left;
+    }
+    .book__authors {
+        width: 120px;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 991px) {
-  .book {
-    max-height: 40%;
-  }
-  .book__preview {
-    border-radius: 10px 10px 0 0;
-  }
+    .book {
+        max-height: 40%;
+    }
+    .book__preview {
+        border-radius: 10px 10px 0 0;
+    }
 }

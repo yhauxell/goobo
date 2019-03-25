@@ -2,10 +2,12 @@
 
 This project is part of a PoC to demonstrate integration with google books api (free access), specifically, volumes given a term. The application at the moment is able to:
 
+* Ajax books search by a desired term.
 * Display Books results (by default will look for "Game of Thrones" term).
 * Select a book and display its details.
 * Order books in asc or desc order.
-* Filter books by year
+* Filter books by year.
+* Ajax pagination.
 
 ### Book
 
@@ -19,7 +21,7 @@ A book contains the following attributes:
 * Description
 * Preview link to Google Books Viewer
 
-## Project structure
+## Fractal project structure
 
 ```
 src

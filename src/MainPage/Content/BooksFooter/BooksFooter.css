@@ -3,5 +3,12 @@
   font-size: 0.8rem;
   background: var(--highlight-color);
   color: var(--alternative-font-color);
-  text-align: right;
+  display: flex;
+  align-items: center;
+}
+.books-footer__pagination{
+    flex:1;
+}
+.books-footer__notice{
+    text-align: right;
 }
