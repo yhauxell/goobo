@@ -24,6 +24,16 @@ A book contains the following attributes:
 * Description
 * Preview link to Google Books Viewer
 
+## Design principles:
+
+* Mobile first approach have been implemented.
+* All the JS and CSS have been developed in-house to avoid extra dependencies and low performance.
+* React library is used to accomplish interactions and state managment with the Context API instead of popular libraries like redux or mobx.
+* Principal components are fully unit tested to ensure liability while scale.
+* Pagination feature is ajax based to GB Api.
+* Google API results use to return duplicated values. This is a major drawback in visualization but better than display wrong result.
+
+
 ## Fractal project structure
 
 ```
@@ -112,13 +122,6 @@ src
 ├── index.js
 └── serviceWorker.js
 ```
-
-### Important Notes: 
-
-* Principal components are unit tested to ensure functionalities quality after modifications.
-* Google API results use to return duplicated values, because of that issue and since max result is 40 in some pages you will find less thant 40 books.
-* Preview book is only available for hight res devices (> 991) in order to prevent unconfortable navigation experience while in mobile, instead short description is displayed for each book.
-
 
 ## Regarding React boilerplace
 
