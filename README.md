@@ -47,6 +47,9 @@ src
 │   │   ├── Loader.css
 │   │   ├── Loader.js
 │   │   └── Loader.test.js
+│   ├── Pagination
+│   │   ├── Pagination.css
+│   │   └── Pagination.js
 │   └── Rating
 │       ├── Rating.css
 │       ├── Rating.js
@@ -107,9 +110,11 @@ src
 └── serviceWorker.js
 ```
 
-### Test Notes: 
+### Important Notes: 
 
-* Principal components are unit tested.
+* Principal components are unit tested to ensure functionalities quality after modifications.
+* Google API results use to return duplicated values, because of that issue and since max result is 40 in some pages you will find less thant 40 books.
+* Preview book is only available for hight res devices (> 768) in order to prevent unconfortable navigation experience while in mobile.
 
 
 ## Regarding React boilerplace
