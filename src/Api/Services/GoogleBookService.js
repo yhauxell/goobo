@@ -22,19 +22,26 @@ export default class GoogleBookService {
         }
 
         let books = {};
-        let ids = new Set();
+        let ids = [];
         let filters = new Set();
         for (let index = 0; index < result.items.length; index++) {
             const book = result.items[index];
-            const id = book.id;
-            ids.add(id);
+            let id = book.id;
+            
+            if(ids.includes(id)){//Fix duplicated ids problem.
+                const rnum = Math.floor(Math.random() * 1000).toString(16);
+                id = id + rnum;
+                book.id = id;
+            }
+            ids.push(id);
+            
             const simpleBook = this.createSimpleBook(book);
             if (simpleBook.year) {
                 filters.add(simpleBook.year);
             }
             books[id] = simpleBook;
         }
-        ids = Array.from(ids);
+        //ids = Array.from(ids);
         return {
             ids,
             books,

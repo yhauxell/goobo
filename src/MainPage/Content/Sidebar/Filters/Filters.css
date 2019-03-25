@@ -4,8 +4,8 @@
     flex-direction: column;
 }
 .sidebar__books-filters-container > h4 {
-    text-align: center;
-    margin: 10px 0 0;
+    text-align: left;
+    margin: 10px 0 0 20px;
     font-size: 1.2rem;
 }
 .sidebar__books-filters {
@@ -14,8 +14,9 @@
     padding: 10px;
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     overflow-y: scroll;
+    flex-wrap: wrap;
 }
 
 .sidebar__books-filters__filter {
@@ -47,7 +48,12 @@
 }
 
 @media screen and (min-width: 768px) {
+    .sidebar__books-filters {
+        flex-direction: column;
+    }
     .sidebar__books-filters-container > h4 {
         font-size: 1rem;
+        text-align: center;
+        margin-left: 0;
     }
 }

@@ -3,7 +3,7 @@
 This project is part of a PoC to demonstrate integration with google books api (free access), specifically, volumes given a term. The application at the moment is able to:
 
 * Ajax books search by a desired term.
-* Display Books results (by default will look for "Game of Thrones" term).
+* Display Books results (by default will look for "electric vehicles" term in order to demonstrate the functionality).
 * Select a book and display its details.
 * Order books in asc or desc order.
 * Filter books by year.
@@ -117,7 +117,7 @@ src
 
 * Principal components are unit tested to ensure functionalities quality after modifications.
 * Google API results use to return duplicated values, because of that issue and since max result is 40 in some pages you will find less thant 40 books.
-* Preview book is only available for hight res devices (> 768) in order to prevent unconfortable navigation experience while in mobile.
+* Preview book is only available for hight res devices (> 991) in order to prevent unconfortable navigation experience while in mobile, instead short description is displayed for each book.
 
 
 ## Regarding React boilerplace

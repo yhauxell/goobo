@@ -16,7 +16,7 @@ export default class MainPage extends Component {
             order: "asc",
             filters: [],
             filter: null,
-            term: "game of thrones",
+            term: "electric vehicles",
             current: null,
             pageSize: 40,
             currentPage: 1,
@@ -55,7 +55,7 @@ export default class MainPage extends Component {
     }
 
     searchBooks(term) {
-        this.setState({currentPage: 1});
+        this.setState({ currentPage: 1 });
         this.getBooks(term);
     }
 
@@ -115,7 +115,9 @@ export default class MainPage extends Component {
     changePage(currentPage) {
         const { term, pageSize } = this.state;
         this.setState({ currentPage, paging: true });
-        this.getBooks(term, (currentPage - 1) * pageSize, pageSize).then(r => {
+        const offset = (currentPage - 1) * pageSize;
+        const from = offset === 0 ? 0 : 1 + offset;
+        this.getBooks(term, from, pageSize).then(r => {
             this.setState({ paging: false });
         });
     }

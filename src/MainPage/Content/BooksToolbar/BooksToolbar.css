@@ -3,4 +3,16 @@
     flex-direction: row;
     justify-content: stretch;
     margin: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.books-toolbar__disclaimer{
+    width: 100%;
+    background: var(--warn-color);
+    color: var(--warn-font-color);
+    margin-top:5px;
+    padding:4px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: bold;
 }
