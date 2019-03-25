@@ -1,14 +1,14 @@
 {
-  "main.css": "/goobo/static/css/main.4a2f9804.chunk.css",
-  "main.js": "/goobo/static/js/main.6ae952c1.chunk.js",
-  "main.js.map": "/goobo/static/js/main.6ae952c1.chunk.js.map",
+  "main.css": "/goobo/static/css/main.2e1adbfc.chunk.css",
+  "main.js": "/goobo/static/js/main.92bf6b05.chunk.js",
+  "main.js.map": "/goobo/static/js/main.92bf6b05.chunk.js.map",
   "runtime~main.js": "/goobo/static/js/runtime~main.73fab527.js",
   "runtime~main.js.map": "/goobo/static/js/runtime~main.73fab527.js.map",
   "static/js/2.c8f6aeb1.chunk.js": "/goobo/static/js/2.c8f6aeb1.chunk.js",
   "static/js/2.c8f6aeb1.chunk.js.map": "/goobo/static/js/2.c8f6aeb1.chunk.js.map",
   "index.html": "/goobo/index.html",
-  "precache-manifest.cdb8c64863489a437bfca57174511984.js": "/goobo/precache-manifest.cdb8c64863489a437bfca57174511984.js",
+  "precache-manifest.eda626aa6c2160538dbd24e548e42a27.js": "/goobo/precache-manifest.eda626aa6c2160538dbd24e548e42a27.js",
   "service-worker.js": "/goobo/service-worker.js",
-  "static/css/main.4a2f9804.chunk.css.map": "/goobo/static/css/main.4a2f9804.chunk.css.map",
+  "static/css/main.2e1adbfc.chunk.css.map": "/goobo/static/css/main.2e1adbfc.chunk.css.map",
   "static/media/dead-error.svg": "/goobo/static/media/dead-error.d208d3f9.svg"
 }
