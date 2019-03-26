@@ -8,7 +8,7 @@ it("should render the full Book empty", () => {
     expect(container.props.className).toEqual("book");
     const [year, preview, title, authors, rating] = container.children;
     expect(year.type).toBe("span");
-    expect(year.children).toBe(null);
+    expect(year.children.length).toBe(1);
     expect(preview.type).toBe("img");
     expect(title.type).toBe("h2");
     expect(authors.type).toBe("div");

@@ -1,16 +1,22 @@
 ## Goobo - Book search and preview from Google Books
 
-This project is part of a PoC to demonstrate integration with google books api (free access), specifically, volumes given a term. The application at the moment is able to:
+This project is part of an integration Demo with google books api (free access), specifically, search for volumes given a term. 
 
-* Ajax books search by a desired term.
-* Display Books results (by default will look for "electric vehicles" term in order to demonstrate the functionality).
+## Capabilities:
+
+* Search while typing a term
+* Ajax books search.
+* Display Books results (default search term is "electric vehicle").
 * Select a book and display its details.
 * Order books in asc or desc order.
 * Filter books by year.
 * Ajax pagination.
 
-## Available at: 
-[Yausell's Github Pages](https://yhauxell.github.io/goobo)
+## Demo is live at:  
+
+[My Github Pages > Goobo](https://yhauxell.github.io/goobo)
+
+## Entities
 
 ### Book
 
@@ -29,9 +35,9 @@ A book contains the following attributes:
 * Mobile first approach have been implemented.
 * All the JS and CSS have been developed in-house to avoid extra dependencies and low performance.
 * React library is used to accomplish interactions and state managment with the Context API instead of popular libraries like redux or mobx.
-* Principal components are fully unit tested to ensure liability while scale.
+* Principal components are fully unit tested to ensure reliability while scale.
 * Pagination feature is ajax based to GB Api.
-* Google API results use to return duplicated values. This is a major drawback in visualization but better than display wrong result.
+* Google API results use to return duplicated values. This is a major drawback in visualization but better than display wrong results.
 
 
 ## Fractal project structure
@@ -39,9 +45,11 @@ A book contains the following attributes:
 ```
 src
 ├── Api
-│   └── Services
-│       ├── GoogleBookService.js
-│       └── GoogleBookService.test.js
+│   ├── Services
+│   │   ├── GoogleBookService.js
+│   │   └── GoogleBookService.test.js
+│   └── Utils
+│       └── DebounceFunction.js
 ├── App.css
 ├── App.js
 ├── App.test.js
@@ -62,7 +70,8 @@ src
 │   │   └── Loader.test.js
 │   ├── Pagination
 │   │   ├── Pagination.css
-│   │   └── Pagination.js
+│   │   ├── Pagination.js
+│   │   └── Pagination.test.js
 │   └── Rating
 │       ├── Rating.css
 │       ├── Rating.js
@@ -99,9 +108,11 @@ src
 │   │       ├── Filters
 │   │       │   ├── Filter
 │   │       │   ├── Filters.css
-│   │       │   └── Filters.js
+│   │       │   ├── Filters.js
+│   │       │   └── Filters.test.js
 │   │       ├── Sidebar.css
-│   │       └── Sidebar.js
+│   │       ├── Sidebar.js
+│   │       └── Sidebar.test.js
 │   ├── MainPage.css
 │   ├── MainPage.js
 │   ├── MainPage.test.js
@@ -123,13 +134,17 @@ src
 └── serviceWorker.js
 ```
 
-## Regarding React boilerplace
+## Regarding React configuration
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+To run dev mode, just:
 
 ### `npm start`
 

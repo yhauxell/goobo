@@ -10,7 +10,7 @@ export default function Filters(props) {
         <i className="fas fa-filter" /> Show only
       </h4>
       <ul className="sidebar__books-filters">
-        {(filters.length >0 &&
+        {(filters && filters.length >0 &&
           filters.map(f => {
             return (
               <Filter key={f} {...{ f, ami: filter === f, filterBooks }} />

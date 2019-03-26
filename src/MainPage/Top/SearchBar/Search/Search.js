@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import "./Search.css";
+import { debounce } from "../../../../Api/Utils/DebounceFunction";
 export default class Search extends Component {
     constructor(props) {
         super(props);
         this.state = { term: "" };
+        this.handleSubmit = debounce(this.handleSubmit.bind(this), 300);
     }
     render() {
         return (
             <div className="search">
-                <form
-                    role="search"
-                    aria-label="Search at Google Books"
-                    onSubmit={(event) => this.handleSubmit(event)}
-                >
+                <form role="search" aria-label="Search at Google Books" onSubmit={(e)=> e.preventDefault()}>
+                    <span className="search__prepend">
+                        <i className="fas fa-search" />
+                    </span>
                     <input
                         title="Type your search term"
                         className="search__input"
@@ -21,22 +22,11 @@ export default class Search extends Component {
                         aria-required="false"
                         placeholder="Type your search term.."
                         value={this.state.term}
-                        onChange={event =>
-                            this.setState({ term: event.target.value })
-                        }
-                        onKeyUp={event => {
-                            if (event.key === "Enter") {
-                                this.handleSubmit(event);
-                            }
+                        onChange={event => {
+                            this.setState({ term: event.target.value });
+                            this.handleSubmit(event);
                         }}
                     />
-                    <button
-                        type="submit"
-                        title="Press to search for books"
-                        className="search__btn"
-                    >
-                        <i className="fas fa-search" />
-                    </button>
                 </form>
             </div>
         );
@@ -44,6 +34,5 @@ export default class Search extends Component {
 
     handleSubmit(event) {
         this.props.searchBooks(this.state.term);
-        event.preventDefault();
     }
 }

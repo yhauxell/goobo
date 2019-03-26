@@ -14,7 +14,7 @@ export default function Book(props) {
         thumbnail,
         previewLink
     } = props;
-    const lowResDevice = window.matchMedia("(max-width: 991px)").matches;
+    const lowResDevice = window.matchMedia && window.matchMedia("(max-width: 991px)").matches;
     return (
         <div className="book" tabIndex="0">
             <span className="book__year">{year ? year : "----"}</span>

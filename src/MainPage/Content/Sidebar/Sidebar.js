@@ -4,7 +4,7 @@ import BookPreview from "./BookPreview/BookPreview";
 import Filters from "./Filters/Filters";
 import MainPageContext from "../../MainPageContext";
 export default function Sidebar() {
-    const lowResDevice = window.matchMedia("(max-width: 991px)").matches;
+    const lowResDevice = window.matchMedia && window.matchMedia("(max-width: 991px)").matches;
     return (
         <MainPageContext.Consumer>
             {({ filter, filters, actions: { filterBooks }, current }) => {
